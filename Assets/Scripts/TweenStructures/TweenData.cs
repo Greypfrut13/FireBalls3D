@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TweenData <T>
 {
-    public T EndValue;
+    public T To;
     public float Duration;
     public Ease Ease;
 }

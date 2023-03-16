@@ -16,7 +16,7 @@ public class SizeAnimation : MonoBehaviour
     private void ApplyAnimation(Vector3TweenData tweenData)
     {
         transform
-            .DOScale(tweenData.EndValue, tweenData.Duration)
+            .DOScale(tweenData.To, tweenData.Duration)
             .SetEase(tweenData.Ease)
             .SetLoops(-1, LoopType.Yoyo);
     }
