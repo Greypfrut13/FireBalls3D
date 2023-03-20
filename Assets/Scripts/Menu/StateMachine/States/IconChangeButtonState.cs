@@ -26,5 +26,9 @@ public class IconChangeButtonState : MonoState
         _audioSource.PlayOneShot(_clickSound);
 
         _audioSource.mute = false;
+
+        OnStateEnter();
     }
+
+    protected virtual void OnStateEnter() {}
 }
