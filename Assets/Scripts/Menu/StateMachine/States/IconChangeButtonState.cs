@@ -13,7 +13,7 @@ public class IconChangeButtonState : MonoState
     private Image _image;
     private AudioSource _audioSource;
 
-    private void Start() 
+    private void Awake() 
     {
         _image = GetComponent<Image>();
         _audioSource = GetComponent<AudioSource>();
