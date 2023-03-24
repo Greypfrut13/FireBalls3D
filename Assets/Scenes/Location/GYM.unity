@@ -1188,6 +1188,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403864059}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &414866068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3926375291363349427, guid: 9cf9cdbf76f1fa44f99b942e4f4dcfab,
+    type: 3}
+  m_PrefabInstance: {fileID: 933090659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33d18474681c3246ad98ba27de3c523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &423208844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,6 +1654,8 @@ MonoBehaviour:
   _character: {fileID: 1092603215717993141}
   _shootingPreferences: {fileID: 11400000, guid: 78dd62145069e9e41a069de1dff0a51f,
     type: 2}
+  _path: {fileID: 414866068}
+  _movePreferences: {fileID: 11400000, guid: de8c10d6c53211f458e9d53e55e15060, type: 2}
 --- !u!850595691 &687947469
 LightingSettings:
   m_ObjectHideFlags: 0
