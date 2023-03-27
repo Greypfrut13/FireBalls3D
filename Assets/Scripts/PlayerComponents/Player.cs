@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Character _character;
     [SerializeField] private ShootingPreferencesSo _shootingPreferences;
+    [SerializeField] private ProjectilePool _projectilePool;
 
     [SerializeField] private Path _path;
     [SerializeField] private MovePreferencesSo _movePreferences;
@@ -16,15 +17,16 @@ public class Player : MonoBehaviour
 
     private void Start() 
     {
-        _weapon = _shootingPreferences.CreateWeapon(_character.ShootPoint);
-        _fireRate = _shootingPreferences.CreateFireRate();
+        _projectilePool.Initialize(_shootingPreferences.ProjectileFactory);
+        _projectilePool.Prewarm();
+
+        _weapon = new Weapon(_character.ShootPoint, _projectilePool, _shootingPreferences.ProjectileSpeed);
+        _fireRate = new FireRate(_shootingPreferences.FireRate);
         _pathFollowing = new PathFollowing(_path, this, _movePreferences);
     }
 
-    public void Shoot()
-    {
+    public void Shoot() =>
         _fireRate.Shoot(_weapon);
-    }
 
     [ContextMenu("Move")]
     public void Move()

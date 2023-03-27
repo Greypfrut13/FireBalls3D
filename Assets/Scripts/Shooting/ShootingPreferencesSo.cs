@@ -6,18 +6,14 @@ using UnityEngine;
 public class ShootingPreferencesSo : ScriptableObject
 {
     [Header("Projectile")]
-    [SerializeField] private Projectile _projectilePrefab;
+    [SerializeField] private ProjectileFactory _projectileFactory;
     [SerializeField] [Min(0.0f)] private float _projectileSpeed;
 
     [SerializeField] [Min(0.0f)] private float _fireRate;
 
-    public Weapon CreateWeapon(Transform shootPoint)
-    {
-        return new Weapon(shootPoint, _projectilePrefab, _projectileSpeed);
-    }
+    public ProjectileFactory ProjectileFactory => _projectileFactory;
 
-    public FireRate CreateFireRate()
-    {
-        return new FireRate(_fireRate);
-    } 
+    public float ProjectileSpeed => _projectileSpeed;
+
+    public float FireRate => _fireRate;
 }
