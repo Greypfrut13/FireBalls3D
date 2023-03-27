@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5578224938228659467}
   - component: {fileID: 3364761647062818737}
   - component: {fileID: 7309952209547289837}
+  - component: {fileID: 6410243782032618944}
   m_Layer: 0
   m_Name: 3SegmentObstacle
   m_TagString: Untagged
@@ -695,3 +696,20 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6410243782032618944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6400467847113601451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9dd84dbd15dd104e8daddb8cf488a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  _playerInputHandler: {fileID: 0}
+  _pool: {fileID: 0}
+  _projectileFactory: {fileID: 11400000, guid: c6bc123920f08b545a393f77b0aaf9bf, type: 2}
+  _bouncePreferences: {fileID: 11400000, guid: d9d9c8dfc7441344689e3b748a105fff, type: 2}

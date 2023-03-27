@@ -21,4 +21,8 @@ public class MonoComponentPool<T> : MonoBehaviour, IPool<T> where T : Component
 
     public void Return(T member) => _pool.Return(member);
 
+    public void Enable() => gameObject.SetActive(true);
+
+    public void Disable() => gameObject.SetActive(false);
+
 }

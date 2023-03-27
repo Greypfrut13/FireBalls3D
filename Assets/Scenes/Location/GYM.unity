@@ -722,6 +722,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3SegmentObstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 6410243782032618944, guid: 311cf5b37af88c04b88c7bc4a6163acf,
+        type: 3}
+      propertyPath: _pool
+      value: 
+      objectReference: {fileID: 232439929}
+    - target: {fileID: 6410243782032618944, guid: 311cf5b37af88c04b88c7bc4a6163acf,
+        type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 602953954}
+    - target: {fileID: 6410243782032618944, guid: 311cf5b37af88c04b88c7bc4a6163acf,
+        type: 3}
+      propertyPath: _playerInputHandler
+      value: 
+      objectReference: {fileID: 602953955}
     - target: {fileID: 7309952209547289837, guid: 311cf5b37af88c04b88c7bc4a6163acf,
         type: 3}
       propertyPath: _speed.Max
@@ -805,7 +820,7 @@ PrefabInstance:
     - target: {fileID: 8913296990153660314, guid: 311cf5b37af88c04b88c7bc4a6163acf,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2152
+      value: 2161
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 311cf5b37af88c04b88c7bc4a6163acf, type: 3}
