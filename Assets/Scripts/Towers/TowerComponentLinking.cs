@@ -13,6 +13,8 @@ public class TowerComponentLinking : MonoBehaviour
     private TowerDisassembling _disassembling;
     private Tower _tower;
 
+    private IReadOnlyReactiveProperty<int> _towerSegmentCount = new FakeReactiveProperty<int>();
+
     [ContextMenu(nameof(Prepare))]
     public async Task Prepare()
     {
@@ -20,11 +22,17 @@ public class TowerComponentLinking : MonoBehaviour
 
         _disassembling = new TowerDisassembling(_tower, _towerRoot);
         _projectileHitTrigger.ProjectileReturned += _disassembling.TryRemoveBottom;
+
+        _towerSegmentCount = _tower.SegmentCount;
+
+        _towerSegmentCount.Subscribe(_segmentsLeftText.UpdateTextValue);
     }
 
     private void OnDisable()
     {
         if(_disassembling != null)
             _projectileHitTrigger.ProjectileReturned -= _disassembling.TryRemoveBottom;
+
+        _towerSegmentCount.Unsubscribe(_segmentsLeftText.UpdateTextValue);
     }
 }
