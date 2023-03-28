@@ -9,22 +9,13 @@ using UnityObject = UnityEngine.Object;
 
 public class TowerGenerator : MonoBehaviour
 {
-    [SerializeField] private UnityObject _towerFactory;
+    [SerializeField] private TowerFactory _towerFactory;
     [SerializeField] private Transform _towerRoot;
     [SerializeField] private Vector3TweenData _rotationData;
 
-    private IAsyncTowerFactory TowerFactory =>(IAsyncTowerFactory) _towerFactory;
-
     private readonly CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
 
-    private void OnValidate() 
-    {
-        if(_towerFactory != null && _towerFactory is IAsyncTowerFactory == false)
-        {
-            _towerFactory = null;
-            throw new InvalidOperationException("Tower factory should be derived from IAsyncTowerFactory");
-        }    
-    }
+    public ITowerCreationSegmentCallback CreationCallback => _towerFactory;
 
     private void OnDisable()
     {
@@ -35,7 +26,7 @@ public class TowerGenerator : MonoBehaviour
     public async Task<Tower> Generate()
     {
         ApplyRotation(_rotationData);
-        return await TowerFactory.CreateAsync(_towerRoot, _cancellationTokenSource.Token);
+        return await _towerFactory.CreateAsync(_towerRoot, _cancellationTokenSource.Token);
     } 
 
     private void ApplyRotation(Vector3TweenData rotationData)
