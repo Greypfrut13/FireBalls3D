@@ -5,5 +5,5 @@ using UnityEngine;
 
 public interface ITowerCreationSegmentCallback 
 {
-    event Action SegmentCreated;
+    event Action<int> SegmentCreated;
 }
