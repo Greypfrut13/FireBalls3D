@@ -9,6 +9,7 @@ public class TowerComponentLinking : MonoBehaviour
     [SerializeField] private TowerGenerator _generator;
     [SerializeField] private RestoreProjectilePoolTrigger _projectileHitTrigger;
     [SerializeField] private TowerSegmentsLeftText _segmentsLeftText; 
+    [SerializeField] private TowerAudio _audio;
 
     private TowerDisassembling _disassembling;
     private Tower _tower;
@@ -28,6 +29,7 @@ public class TowerComponentLinking : MonoBehaviour
         _towerSegmentCount = _tower.SegmentCount;
 
         _towerSegmentCount.Subscribe(_segmentsLeftText.UpdateTextValue);
+        _towerSegmentCount.Subscribe(_audio.PlaySound);
     }
 
     private void OnDisable()
@@ -35,7 +37,9 @@ public class TowerComponentLinking : MonoBehaviour
         if(_disassembling != null)
             _projectileHitTrigger.ProjectileReturned -= _disassembling.TryRemoveBottom;
 
-        _towerSegmentCount.Unsubscribe(_segmentsLeftText.UpdateTextValue);
         _generator.CreationCallback.SegmentCreated -= _segmentsLeftText.UpdateTextValue;
+
+        _towerSegmentCount.Unsubscribe(_segmentsLeftText.UpdateTextValue);
+        _towerSegmentCount.Unsubscribe(_audio.PlaySound);
     }
 }
