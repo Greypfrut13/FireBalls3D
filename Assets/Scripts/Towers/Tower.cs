@@ -12,4 +12,7 @@ public class Tower
     {
         _segments = segments;
     }
+
+    public TowerSegment RemoveBottom() =>
+        _segments.Dequeue();
 }
