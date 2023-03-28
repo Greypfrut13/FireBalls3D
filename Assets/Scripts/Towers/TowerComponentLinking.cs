@@ -8,6 +8,7 @@ public class TowerComponentLinking : MonoBehaviour
     [SerializeField] private Transform _towerRoot;
     [SerializeField] private TowerGenerator _generator;
     [SerializeField] private RestoreProjectilePoolTrigger _projectileHitTrigger;
+    [SerializeField] private TowerSegmentsLeftText _segmentsLeftText; 
 
     private TowerDisassembling _disassembling;
     private Tower _tower;
