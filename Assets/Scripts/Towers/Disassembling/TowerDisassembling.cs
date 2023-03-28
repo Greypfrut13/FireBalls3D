@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityObject = UnityEngine.Object;
 
@@ -14,8 +15,16 @@ public class TowerDisassembling
         _towerRoot = towerRoot;
     }
 
-    public void RemoveBottom()
+    public event Action Disassembled;
+
+    public void TryRemoveBottom()
     {
+        if(_tower.SegmentCount == 0)
+        {
+            Disassembled?.Invoke();
+            return;
+        }
+
         TowerSegment segment = _tower.RemoveBottom();
         Vector3 segmentScale = segment.transform.localScale;
 

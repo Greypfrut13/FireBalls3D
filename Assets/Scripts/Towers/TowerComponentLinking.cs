@@ -18,12 +18,12 @@ public class TowerComponentLinking : MonoBehaviour
         _tower = await _generator.Generate();
 
         _disassembling = new TowerDisassembling(_tower, _towerRoot);
-        _projectileHitTrigger.ProjectileReturned += _disassembling.RemoveBottom;
+        _projectileHitTrigger.ProjectileReturned += _disassembling.TryRemoveBottom;
     }
 
     private void OnDisable()
     {
         if(_disassembling != null)
-            _projectileHitTrigger.ProjectileReturned -= _disassembling.RemoveBottom;
+            _projectileHitTrigger.ProjectileReturned -= _disassembling.TryRemoveBottom;
     }
 }
