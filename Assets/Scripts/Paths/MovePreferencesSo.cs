@@ -12,5 +12,4 @@ public class MovePreferencesSo : ScriptableObject
 
     public float RotateDuration => _rotateDuration;
 
-    public float TotalDuration => _durationPerWaypoint + _rotateDuration;
 }

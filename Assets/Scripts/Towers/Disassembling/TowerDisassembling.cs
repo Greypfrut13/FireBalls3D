@@ -32,4 +32,7 @@ public class TowerDisassembling
         if(_tower.SegmentCount.Value == 0)
             Disassembled?.Invoke();
     }
+
+    public TowerDisassemblingAwaitor GetAwaiter() =>
+         new TowerDisassemblingAwaitor(this);
 }

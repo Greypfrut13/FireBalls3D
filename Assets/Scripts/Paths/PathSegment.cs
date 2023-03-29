@@ -6,4 +6,5 @@ using UnityEngine;
 public class PathSegment
 {
     public Transform[] Waypoints;
+    public PathPlatformBuilder PlatformBuilder;
 }
