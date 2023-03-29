@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Character _character;
+    [Header("Character")]
+    [SerializeField] private CharacterContrainerSo _characterContainter;
+
+    [Header("Path")]
+    [SerializeField] private MovePreferencesSo _movePreferences;
+    [SerializeField] private Path _path;
+
+    [Header("Shooting")]
     [SerializeField] private ShootingPreferencesSo _shootingPreferences;
     [SerializeField] private ProjectilePool _projectilePool;
 
-    [SerializeField] private Path _path;
-    [SerializeField] private MovePreferencesSo _movePreferences;
 
     private FireRate _fireRate;
     private Weapon _weapon;
@@ -17,10 +22,12 @@ public class Player : MonoBehaviour
 
     private void Start() 
     {
+        Character character = _characterContainter.Create(transform);
+
         _projectilePool.Initialize(_shootingPreferences.ProjectileFactory);
         _projectilePool.Prewarm();
 
-        _weapon = new Weapon(_character.ShootPoint, _projectilePool, _shootingPreferences.ProjectileSpeed);
+        _weapon = new Weapon(character.ShootPoint, _projectilePool, _shootingPreferences.ProjectileSpeed);
         _fireRate = new FireRate(_shootingPreferences.FireRate);
         _pathFollowing = new PathFollowing(_path, this, _movePreferences);
     }
