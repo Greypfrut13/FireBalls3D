@@ -558,7 +558,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 212710701}
-  - component: {fileID: 212710700}
   - component: {fileID: 212710702}
   m_Layer: 0
   m_Name: Tower
@@ -567,24 +566,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &212710700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 212710699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48cc3ede2b141c84a8bb6d9a19017c4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _towerFactory: {fileID: 11400000, guid: 74fbc3b72e55f8a44a53160851226194, type: 2}
-  _towerRoot: {fileID: 277481281}
-  _rotationData:
-    To: {x: 0, y: 1080, z: 0}
-    Duration: 2
-    Ease: 9
 --- !u!4 &212710701
 Transform:
   m_ObjectHideFlags: 0
@@ -617,10 +598,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _towerRoot: {fileID: 277481281}
-  _generator: {fileID: 212710700}
-  _projectileHitTrigger: {fileID: 1026985850}
-  _segmentsLeftText: {fileID: 1827956607}
-  _audio: {fileID: 2113608410}
+  _spawnAnimation: {fileID: 0}
+  _projectileHitTrigger: {fileID: 0}
+  _segmentsLeftText: {fileID: 0}
+  _audio: {fileID: 0}
 --- !u!1 &232439927
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,7 +854,7 @@ PrefabInstance:
     - target: {fileID: 8913296990153660314, guid: 311cf5b37af88c04b88c7bc4a6163acf,
         type: 3}
       propertyPath: m_VersionIndex
-      value: 2161
+      value: 2164
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 311cf5b37af88c04b88c7bc4a6163acf, type: 3}
@@ -2725,7 +2706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac500b9e8aff4b4d8c5e327a3997d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pool: {fileID: 232439929}
 --- !u!1001 &1045285813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3623,7 +3603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac500b9e8aff4b4d8c5e327a3997d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pool: {fileID: 232439929}
 --- !u!1 &1827956603
 GameObject:
   m_ObjectHideFlags: 0
