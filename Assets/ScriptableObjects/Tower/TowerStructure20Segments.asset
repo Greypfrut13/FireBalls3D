@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000b4897a260298439f9699218516412, type: 3}
+  m_Name: TowerStructure20Segments
+  m_EditorClassIdentifier: 
+  _segmentPrefab: {fileID: -7673585194451429776, guid: c7e0312461b7d8c4990440593e4169d1,
+    type: 3}
+  _segmentCount: 20
+  _spawnTimePerSegment: 0.1
+  _materials:
+  - {fileID: 2100000, guid: 733d4a01dd8a4ec46ab5f63efbe52d7a, type: 2}
+  - {fileID: 2100000, guid: 4413d9e3b089d844c921c9a2a10133d4, type: 2}

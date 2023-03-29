@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 000b4897a260298439f9699218516412, type: 3}
-  m_Name: TowerFactory
+  m_Name: TowerStructure40Segments
   m_EditorClassIdentifier: 
   _segmentPrefab: {fileID: -7673585194451429776, guid: c7e0312461b7d8c4990440593e4169d1,
     type: 3}
-  _segmentCount: 20
+  _segmentCount: 40
   _spawnTimePerSegment: 0.1
   _materials:
   - {fileID: 2100000, guid: 733d4a01dd8a4ec46ab5f63efbe52d7a, type: 2}
