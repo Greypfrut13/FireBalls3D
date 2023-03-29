@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public interface IAsyncTowerFactory 
+public interface IAsyncTowerGenerator 
 {
-    Task<Tower> CreateAsync(Transform tower, CancellationToken cancellationToken);
+    Task<Tower> CreateAsync(Transform tower);
 }

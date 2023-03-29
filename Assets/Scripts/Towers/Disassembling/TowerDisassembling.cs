@@ -20,10 +20,7 @@ public class TowerDisassembling
     public void TryRemoveBottom()
     {
         if(_tower.SegmentCount.Value == 0)
-        {
-            Disassembled?.Invoke();
             return;
-        }
 
         TowerSegment segment = _tower.RemoveBottom();
         Vector3 segmentScale = segment.transform.localScale;
@@ -31,5 +28,8 @@ public class TowerDisassembling
         _towerRoot.position -= Vector3.up * segmentScale.y;
 
         UnityObject.Destroy(segment.gameObject);
+
+        if(_tower.SegmentCount.Value == 0)
+            Disassembled?.Invoke();
     }
 }
