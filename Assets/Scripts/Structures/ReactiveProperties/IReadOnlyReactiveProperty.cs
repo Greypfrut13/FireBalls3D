@@ -10,3 +10,5 @@ public interface IReadOnlyReactiveProperty<out T>
     void Subscribe(Action<T> valueChanged);
     void Unsubscribe(Action<T> valueChanged);
 }
+
+
