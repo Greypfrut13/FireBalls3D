@@ -2405,7 +2405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc977908e0866c4aab1e7346ab1732a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelSceneName: Arctic1
+  _stateMachine: {fileID: 11400000, guid: 410ac7acc8bf6f74fbf102a04f3a84ee, type: 2}
 --- !u!1 &1582622388
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "LevelEnteryState", menuName = "ScriptableObjects/Game/LevelEnteryState")]
 public class LevelEnteryStateSo : GameStateSo
 {
     [SerializeField] private Scene _scene;
