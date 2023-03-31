@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  m_GroupName: Player
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 8f39e94820e5fad45994d06cec6a6db9
+  m_SerializeEntries:
+  - m_GUID: 2b651d22c7fb0554e88ce3ec48953da7
+    m_Address: Assets/Prefabs/Player
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 260a8d7a0469efa4ab491e0a9b9c8f7d
+    m_Address: Assets/Prefabs/Characters
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b30d4483f636b9446b59217585ede0b7
+    m_Address: Assets/Prefabs/Projectiles
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 450d98f608650634887c71c89c1d38bb
+    m_Address: Assets/ScriptableObjects/Characters
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1f3b6049d26fd394781768bbcde0044b
+    m_Address: Assets/ScriptableObjects/Movement
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7ae61d0de8dee9f49aac47a6ca95b5b6
+    m_Address: Assets/ScriptableObjects/Shooting
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ea8a9aeffca744e419f4da8bdd53cc2e, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3adb17d0784313a4dabb947a35a6f02f, type: 2}
+    - {fileID: 11400000, guid: 2338b313e55bd4046a662d431bae5cbf, type: 2}
