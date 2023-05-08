@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GameStateMachine
   m_EditorClassIdentifier: 
   _states:
-  - {fileID: 11400000, guid: 72a49955128dda742a71b47689260455, type: 2}
+  - {fileID: 11400000, guid: bdd448d5e053dc048a69c0ab7ff72772, type: 2}
