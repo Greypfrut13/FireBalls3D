@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "LevelStructure", menuName = "ScriptableObjects/Levels/LevelStructure")]
-public class LevelStructureSo : ScriptableObject
+[CreateAssetMenu(fileName = "PathStructure", menuName = "ScriptableObjects/Levels/PathStructure")]
+public class PathStructureSo : ScriptableObject
 {
     [SerializeField] private Path _pathPrefab;
     [SerializeField] private List<PathPlatform> _platforms = new List<PathPlatform>();
@@ -19,10 +20,10 @@ public class LevelStructureSo : ScriptableObject
         }
     }
 
-    public Path CreatePath(Transform pathRoot, ObstacleCollisionFeedback feedback)
+    public Path CreatePath(Transform pathRoot, ObstacleCollisionFeedback feedback, CancellationTokenSource cancellationTokenSource)
     {
         Path path = Instantiate(_pathPrefab, pathRoot);
-        path.Initialize(_platforms, feedback);
+        path.Initialize(_platforms, feedback, cancellationTokenSource);
 
         return path;
     }

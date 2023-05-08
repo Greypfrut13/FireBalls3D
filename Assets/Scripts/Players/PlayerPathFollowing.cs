@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class PlayerPathFollowing 
@@ -15,7 +16,7 @@ public class PlayerPathFollowing
         _inputHandler = inputHandler;
     }
 
-    public async void StartMovingAsync()
+    public async void StartMovingAsync(CancellationToken cancellationToken)
     {
         IReadOnlyList<PathSegment> segments = _path.Segments;
 
@@ -26,6 +27,9 @@ public class PlayerPathFollowing
 
             (TowerDisassembling towerDisassembling, ObstacleDissapearing obstaclesDisappearing)
                 = await pathSegment.PlatformBuilder.BuildAsync();
+
+            if(cancellationToken.IsCancellationRequested)
+                return;
 
             _inputHandler.Enable();
 

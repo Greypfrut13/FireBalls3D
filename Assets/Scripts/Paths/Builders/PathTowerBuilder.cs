@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Threading.Tasks;
+using System.Threading;
 using UnityEngine;
 
 public class PathTowerBuilder : MonoBehaviour
@@ -24,7 +25,7 @@ public class PathTowerBuilder : MonoBehaviour
         _structure = structure;
     }
 
-    public async Task<TowerDisassembling> BuildAsync(ProjectilePool pool)
+    public async Task<TowerDisassembling> BuildAsync(ProjectilePool pool, CancellationToken cancellationToken)
     {
         _spawnAnimation.ApplyTo(_towerRoot);
         _projectileHitTrigger.Initialize(pool);
@@ -32,8 +33,11 @@ public class PathTowerBuilder : MonoBehaviour
         TowerGenerator generator = new TowerGenerator(_structure);
         generator.SegmentCreated += _segmentsLeftText.UpdateTextValue;
 
-        Tower tower = await generator.CreateAsync(_towerRoot);
+        Tower tower = await generator.CreateAsync(_towerRoot, cancellationToken);
         TowerDisassembling disassembling = new TowerDisassembling(tower, _towerRoot);
+
+        if(cancellationToken.IsCancellationRequested)
+            return disassembling;
         
         SubscribeComponents(disassembling, tower, generator );
 
