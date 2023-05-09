@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class MenuLevel : MonoBehaviour
+{
+    [SerializeField] private Transform _markerHolder;
+    [SerializeField] private TextMeshPro _number;
+
+    public Transform MarkerHolder => _markerHolder;
+
+    public void PaintNumber(Color color)
+    {
+        _number.color = color;
+    }
+}
