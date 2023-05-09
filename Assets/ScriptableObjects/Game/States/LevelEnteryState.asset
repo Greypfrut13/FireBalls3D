@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8c111ae94306264292805c735a73474, type: 3}
   m_Name: LevelEnteryState
   m_EditorClassIdentifier: 
-  _locationScene:
-    Name: Tropic1
-    LoadMode: 0
   _playerGeneratedPathScene:
     Name: PlayerGeneratorPath
     LoadMode: 1
+  _levelProvider: {fileID: 11400000, guid: 6496a0b0cc3b6aa4aae9aef9d4575871, type: 2}
+  _pathStructureContainter: {fileID: 11400000, guid: bc8ba4ccc726f9946b3fe32512a3cc85,
+    type: 2}

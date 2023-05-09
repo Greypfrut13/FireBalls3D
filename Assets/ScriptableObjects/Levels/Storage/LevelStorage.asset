@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c604796d3a27b474b8805e7441d543f3, type: 3}
+  m_Name: LevelStorage
+  m_EditorClassIdentifier: 
+  _levels:
+  - LocationScene:
+      Name: Arctic1
+      LoadMode: 0
+    PathStructure: {fileID: 11400000, guid: 4c640fb0786bb8e4da576eef5184d1ce, type: 2}
+  - LocationScene:
+      Name: Tropic1
+      LoadMode: 0
+    PathStructure: {fileID: 11400000, guid: ee8863333adb77443a4c066cee0732ba, type: 2}
+  - LocationScene:
+      Name: Arctic1
+      LoadMode: 0
+    PathStructure: {fileID: 11400000, guid: 9b6a8d5d0832cd44ab9308e991dd3864, type: 2}

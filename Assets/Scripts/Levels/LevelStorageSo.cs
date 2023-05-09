@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "LevelStorage", menuName = "ScriptableObjects/Levels/LevelStorage")]
-public class LevelStorageSo : MonoBehaviour
+public class LevelStorageSo : ScriptableObject
 {
     [SerializeField] private Level[] _levels = Array.Empty<Level>();
 

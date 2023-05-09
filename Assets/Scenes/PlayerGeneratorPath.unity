@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,7 +199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pathRoot: {fileID: 167995458}
-  _structure: {fileID: 11400000, guid: 4c640fb0786bb8e4da576eef5184d1ce, type: 2}
+  _pathStructureContainer: {fileID: 11400000, guid: bc8ba4ccc726f9946b3fe32512a3cc85,
+    type: 2}
   _playerMovement: {fileID: 1450640569}
   _obstacleCollisionFeedback:
     Player: {fileID: 1450640571}

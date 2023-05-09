@@ -14,6 +14,6 @@ public class CurrentLevel : ScriptableObject, ILevelNumberProvider, ILevelProvid
 
     public void StepToNextLevel()
     {
-        _levelNumber.Value = Mathf.Clamp(_levelNumber.Value + 1, 0, _storage.Levels.Count);
+        _levelNumber.Value = Mathf.Clamp(_levelNumber.Value + 1, 1, _storage.Levels.Count);
     }
 }
