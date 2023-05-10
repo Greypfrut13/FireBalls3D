@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movePreferences: {fileID: 11400000, guid: de8c10d6c53211f458e9d53e55e15060, type: 2}
+  _stateMachine: {fileID: 11400000, guid: 410ac7acc8bf6f74fbf102a04f3a84ee, type: 2}
   _inputHandler: {fileID: 8725650163534789885}
   _player: {fileID: 8725650163534789884}
 --- !u!1 &8725650163839493225

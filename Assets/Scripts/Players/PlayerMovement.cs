@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private MovePreferencesSo _movePreferences;
+    [SerializeField] private GameStateMachineSo _stateMachine;
 
     [Header("Player")]
     [SerializeField] private PlayerInputHandler _inputHandler;
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
         new PlayerPathFollowing(
             new PathFollowing(path, _player, _movePreferences), 
-            path, _inputHandler)
+            path, _inputHandler, new LevelPathCompletion(_stateMachine))
             .StartMovingAsync(cancellationTokenSource.Token);
     }
 }

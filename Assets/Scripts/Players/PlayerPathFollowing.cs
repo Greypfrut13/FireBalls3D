@@ -8,12 +8,14 @@ public class PlayerPathFollowing
     private readonly PathFollowing _pathFollowing;
     private readonly Path _path;
     private readonly PlayerInputHandler _inputHandler;
+    private readonly IPassComplition _pathComplition;
 
-    public PlayerPathFollowing(PathFollowing pathFollowing, Path path, PlayerInputHandler inputHandler)
+    public PlayerPathFollowing(PathFollowing pathFollowing, Path path, PlayerInputHandler inputHandler, IPassComplition pathComplition)
     {
         _pathFollowing = pathFollowing;
         _path = path;
         _inputHandler = inputHandler;
+        _pathComplition = pathComplition;
     }
 
     public async void StartMovingAsync(CancellationToken cancellationToken)
@@ -36,5 +38,7 @@ public class PlayerPathFollowing
             await towerDisassembling;
             await obstaclesDisappearing.ApplyAsync();
         }
+
+        _pathComplition.Complete();
     }
 }
