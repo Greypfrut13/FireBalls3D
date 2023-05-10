@@ -30,7 +30,7 @@ public class TowerGenerator : IAsyncTowerGenerator, ITowerCreationSegmentCallbac
         _calcellationTokenSource.Cancel();
     }
 
-    private async Task<Tower> CreateAsync(Transform tower, CancellationToken cancellationToken)
+    public async Task<Tower> CreateAsync(Transform tower, CancellationToken cancellationToken)
     {
         Vector3 position = tower.position;
         int segmentCount = _structure.SegmentCount;

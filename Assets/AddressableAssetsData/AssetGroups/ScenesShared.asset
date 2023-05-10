@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ScenesShared
+  m_EditorClassIdentifier: 
+  m_GroupName: ScenesShared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 75d5ef8759c745f4bbcf4ac275d372f3
+  m_SerializeEntries:
+  - m_GUID: f902b41e10cdd2d44aaf1ada606f5d3c
+    m_Address: Assets/AssetStore/LowPolyEnvironmentPack/FBX/Rock_3.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dfed2e9fb3d8ac84da441095f9422543
+    m_Address: Assets/AssetStore/LowPolyEnvironmentPack/FBX/Rock_2.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b58e7fdfb89fbc549b36a69243aee4c0
+    m_Address: Assets/AssetStore/LowPolyEnvironmentPack/FBX/Rock_4.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: eb3c6fb598ded4c71b8968e1c40a3b4d
+    m_Address: Assets/AssetStore/CustomizableSkybox/Stylized Sky/Shaders/Stylized
+      Sky.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2cddf2ee6a74aca44af00f5a49bd2cf1
+    m_Address: Assets/AssetStore/BitgemURPWater/StylisedWater/URP/Shaders/WaterVolume-URP.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 71bb44319f15e0741846c4fad009f013
+    m_Address: Assets/AssetStore/LowPolyEnvironmentPack/FBX/Rock_6.fbx
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f87d53fcaf34530488b706ee35d9b519
+    m_Address: Assets/AssetStore/BitgemURPWater/StylisedWater/URP/Textures/waves_n.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 55ac68c33cb2d144a9976df607b5e754
+    m_Address: Assets/AssetStore/LowPolyEnvironmentPack/FBX/Materials/Gray.4.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 31321ba15b8f8eb4c954353edc038b1d
+    m_Address: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d82e7789222933e47a751506594fbfc1
+    m_Address: Assets/Fonts/Blues Smile SDF.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 68e6db2ebdc24f95958faec2be5558d6
+    m_Address: Assets/Plugins/TextMesh Pro/Shaders/TMP_SDF.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fe393ace9b354375a9cb14cdbbc28be4
+    m_Address: Assets/Plugins/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ea8a9aeffca744e419f4da8bdd53cc2e, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: e027fc9e7341347409a8effad72db0cb, type: 2}
+    - {fileID: 11400000, guid: 44113e3812a20cd4586079233547f9f4, type: 2}
