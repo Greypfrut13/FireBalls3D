@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour
     private FireRate _fireRate;
     private Weapon _weapon;
 
+    public event Action Died;
+
     private void Start() 
     {
         Character character = _characterContainter.Create(transform);
@@ -29,4 +32,12 @@ public class Player : MonoBehaviour
 
     public void Shoot() =>
         _fireRate.Shoot(_weapon);
+
+    private void OnTriggerEnter(Collider other) 
+    {
+        if(other.TryGetComponent(out Projectile _))
+        {
+            Died?.Invoke();
+        }
+    }
 }
